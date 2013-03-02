@@ -1,0 +1,12 @@
+* これなに
+  mikutterにBookmark機能を追加するプラグインです．「ふぁぼ」ではなく「Bookmark」です．
+  Bookmarkに追加したツイートはIDが保存され，次回起動時にも読み込まれます．
+
+* 機能
+** Bookmarkに追加
+   Bookmarkに追加します．追加したツイートはBookmarkタブに表示されます．
+** Bookmarkから削除
+   Bookmarkから削除します．削除してもBookmarkタブからツイートは消えません（誰か消えるようにして下さい）．
+** Bookmarkを再読み込み
+   削除した後に再読み込みすると，最新のBookmarkに更新されます．
+
