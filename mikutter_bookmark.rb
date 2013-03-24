@@ -90,10 +90,10 @@ Plugin.create :bookmark do
 
   command(:reload_bookmark,
           name: 'Bookmarkを再読み込み',
-          condition: lambda{ |opt| opt.messages.size > 0 },
+          condition: lambda{ |opt| true },
           visible: true,
           icon: File.expand_path(File.join(File.dirname(__FILE__), "icons", "view-refresh.png")),
-          role: :timeline) do |opt|
+          role: :window) do |opt|
     reload_bookmark
   end
 
