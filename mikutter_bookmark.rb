@@ -26,7 +26,8 @@ Plugin.create :bookmark do
     end
     @@bookmark[:list].sort_by{|time,id| time}.last(200).each do |time, id|
       Thread.new {
-        timeline(:bookmark_tab) << Message.findbyid(id)
+        message = Message.findbyid(id)
+        timeline(:bookmark_tab) << message if message
       }
     end
   end
@@ -39,7 +40,8 @@ Plugin.create :bookmark do
       end
       @@bookmark[:list].sort_by{|time,id| time}.last(200).each do |time, id|
         Thread.new {
-          timeline(:bookmark_tab) << Message.findbyid(id)
+          message = Message.findbyid(id)
+          timeline(:bookmark_tab) << message if message
         }
       end
     end
